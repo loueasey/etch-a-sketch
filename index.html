@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="author" content="Luise Wöhlke">
+  <meta name="description" content="Odin Project - Etch-a-Sketch">
+  <meta name="keywords" content="Odin, Luise Wöhlke, Wöhlke, Etch-a-Sketch, Etch a Sketch">
+  <meta charset="UTF-8">
+  <title>Etch-a-Sketch</title>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  
+  <button id="clear" type="button">Clear</button>
+  <div id="container"></div>
+  
+  <script>
+  
+	function clear(){
+	  array.forEach(function(item){item.classList.remove('painted');});
+	  a = prompt("How many squares per side do you want?");
+	  while(container.firstChild){container.removeChild(container.firstChild);}
+	  for(let i = 0; i < a*a; i++){
+		div = document.createElement('div');
+		div.classList.add('square');
+		container.appendChild(div);
+	  }
+      squares = document.querySelectorAll('.square');
+	  array = Array.from(squares);
+	  array.forEach(function(item){item.addEventListener('mouseover', function(){this.classList.toggle('painted');});})
+	  container.style.gridTemplate = 'repeat(' + a + ', 1fr)/repeat(' + a + ', 1fr)';
+	}
+  
+    let a = 8;
+	const container = document.querySelector('#container');
+	const clearbutton = document.querySelector('button');
+	
+	for(let i = 0; i < a*a; i++){
+		div = document.createElement('div');
+		div.classList.add('square');
+		container.appendChild(div);
+	}
+	
+  	let squares = document.querySelectorAll('.square');
+	let array = Array.from(squares);
+    array.forEach(function(item){item.addEventListener('mouseover', function(){this.classList.toggle('painted');});})
+	
+	clearbutton.addEventListener('click', clear)
+  
+  </script>
+  
+</body>
+</html>

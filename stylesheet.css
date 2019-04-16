@@ -1,0 +1,27 @@
+
+#container{
+	margin: 20px;
+	height: 600px;
+	width: 600px;
+	display: grid;
+	grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: 1fr;
+	grid-auto-columns: 1fr;
+	grid-auto-flow: dense;
+	border: grey 1px solid;
+	
+}
+
+#container div{
+}
+
+
+.painted{
+	background-color: pink;
+	
+}
+
+.bordered{
+	background-color: yellow;
+	
+}
