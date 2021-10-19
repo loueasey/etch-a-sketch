@@ -1,9 +1,1 @@
-ODIN Project
-
-
-
-
-Etch-a-Sketch
-
-
-...in progress...
+ODIN Project: Etch-a-Sketch
